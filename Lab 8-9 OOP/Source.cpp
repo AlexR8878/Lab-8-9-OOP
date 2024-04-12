@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    vector<DataPoint> data = readData("trainingData.txt");
+    vector<DataPoint> data = readData("trainingData.txt", true);
 
     // Instantiate the classifiers
     Classifier* nnClassifier = new NNClassifier();

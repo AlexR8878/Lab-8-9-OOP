@@ -14,14 +14,14 @@ struct DataPoint {
 // Abstract base class for classifiers
 class Classifier {
 public:
-    virtual void classify(const std::vector<DataPoint>& data) = 0;
+    virtual std::string classify(const std::vector<DataPoint>& trainingData, const DataPoint& samplePoint) = 0;
     virtual ~Classifier() {} // Make the destructor virtual
 };
 
 // Nearest Neighbor Classifier
 class NNClassifier : public Classifier {
 public:
-    void classify(const std::vector<DataPoint>& data) override;
+    std::string classify(const std::vector<DataPoint>& trainingData, const DataPoint& samplePoint) override;
 
 private:
     // Function to calculate the Euclidean distance between two points
@@ -31,17 +31,17 @@ private:
 // AnotherClassifier
 class AnotherClassifier : public Classifier {
 public:
-    void classify(const std::vector<DataPoint>& data) override;
+    std::string classify(const std::vector<DataPoint>& trainingData, const DataPoint& samplePoint) override;
 };
 
 // KNNClassifier
 class KNNClassifier : public Classifier {
 public:
-    void classify(const std::vector<DataPoint>& data) override;
+    std::string classify(const std::vector<DataPoint>& trainingData, const DataPoint& samplePoint) override;
 };
 
 // Function to read data from a text file
-std::vector<DataPoint> readData(const std::string& filename);
+std::vector<DataPoint> readData(const std::string& filename, bool hasLabels);
 
 // Function to interact with the user and perform classification
 void interact(Classifier* classifier, const std::vector<DataPoint>& data);
