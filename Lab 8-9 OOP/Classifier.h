@@ -45,4 +45,3 @@ std::vector<DataPoint> readData(const std::string& filename);
 
 // Function to interact with the user and perform classification
 void interact(Classifier* classifier, const std::vector<DataPoint>& data);
-

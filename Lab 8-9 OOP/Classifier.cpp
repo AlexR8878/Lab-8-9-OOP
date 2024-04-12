@@ -1,6 +1,8 @@
 #include "Classifier.h"
 #include <cmath>
 #include <fstream>
+#include <iostream>
+#include <sstream>
 using namespace std;
 
 // Function to calculate the Euclidean distance between two points
@@ -62,22 +64,46 @@ void KNNClassifier::classify(const vector<DataPoint>& data) {
     cout << "Using KNNClassifier" << endl;
 }
 
-// Function to read data from a text file
 vector<DataPoint> readData(const string& filename) {
     vector<DataPoint> data;
     ifstream file(filename);
-    if (!file.is_open()) {
-        cerr << "Error opening file " << filename << endl;
-        return data;
+
+    if (file.is_open()) {
+        string line;
+        while (getline(file, line)) {
+            if (line.empty()) continue; // Skip empty lines
+
+            istringstream issLine(line);
+            string value;
+            double x, y, z;
+            int label;
+            char comma;
+
+            // Read the x coordinate
+            getline(issLine, value, ',');
+            x = stod(value);
+
+            // Read the y coordinate
+            getline(issLine, value, ',');
+            y = stod(value);
+
+            // Read the z coordinate
+            getline(issLine, value, ',');
+            z = stod(value);
+
+            // Read the label
+            getline(issLine, value);
+            label = stoi(value);
+
+            // Add the data point to the vector
+            data.push_back({ x, y, z, label });
+        }
+        file.close();
+    }
+    else {
+        cout << "Cannot open this file: " << filename << endl;
     }
 
-    double x, y, z;
-    int label;
-    while (file >> x >> y >> z >> label) {
-        data.push_back({ x, y, z, label });
-    }
-
-    file.close();
     return data;
 }
 
