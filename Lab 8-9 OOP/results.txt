@@ -1,23 +1,23 @@
-Face up
-Landscape left
-Face up
-Portrait upside down
-Portrait
-Portrait upside down
-Face up
-Face up
-Face down
-Landscape left
-Landscape right
-Face down
-Landscape left
-Landscape left
-Face down
-Portrait
-Portrait
-Portrait upside down
-Landscape right
-Portrait upside down
-Face up
-Landscape right
-Landscape left
+-0.14139,-0.04982,-0.9887,Face up
+-0.78343,0.03778,-0.62033,Landscape left
+-0.10727,-0.45019,-0.88647,Face up
+0.27052,0.89044,-0.36596,Portrait upside down
+0.02577,-0.94375,-0.32964,Portrait
+0.04292,0.77025,-0.63629,Portrait upside down
+0.34953,-0.21364,-0.91224,Face up
+0.33303,-0.22032,-0.91682,Face up
+-0.02345,-0.0008,0.99972,Face down
+-0.93624,0.05372,-0.34722,Landscape left
+0.98704,-0.07778,0.14034,Landscape right
+-0.17921,0.06468,0.98168,Face down
+-0.97292,-0.0459,-0.22655,Landscape left
+-0.94747,0.11368,-0.29897,Landscape left
+-0.00969,0.14051,0.99003,Face down
+0.03503,-0.9617,0.27185,Portrait
+0.0281,-0.99724,-0.06873,Portrait
+0.04918,0.99218,0.11471,Portrait upside down
+0.99104,-0.09806,0.09011,Landscape right
+0.07824,0.99649,0.02972,Portrait upside down
+-0.06074,0.03074,-0.99768,Face up
+0.99464,-0.09528,-0.03905,Landscape right
+-0.92184,0.06845,-0.38149,Landscape left

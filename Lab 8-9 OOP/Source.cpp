@@ -1,5 +1,8 @@
 #include <iostream>
 #include "Classifier.h"
+#include "DataPoint.h"
+#include "Utility.h"
+
 using namespace std;
 
 int main() {
